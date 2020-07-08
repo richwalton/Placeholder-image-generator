@@ -1,11 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <head> 
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PlaceHolder Image Generator</title>
+        <link rel="stylesheet" href="style.css" />
+    <style >
+
+    </style>
 </head>
 <body>
-    
+    <div class="container">
+        <form action="">
+            <div>
+                <label>Image Size:</label> 
+                <select>
+                    <option value="150x50">Small</option>
+                    <option value="350x150">Medium</option>
+                    <option value="650x350">Large</option>
+                </select>
+            </div>
+            <div>
+                <label>Text on Image:</label>
+                <input type="text">
+            </div>
+            <div>
+                <label>Color of Background:</label>
+                <input type="color" id="bck" value="#dddddd">
+            </div>
+            <div>
+                <label>Color of Text:</label>
+                <input type="color" id="txt" value="#ff0000">
+            </div>
+           
+        </form>
+    </div>    
+        <img src="">
+    <script>
+        const select = document.querySelector("select");
+        const inputAll = document.querySelectorAll("input");
+
+        select.addEventListener("change",build);
+        inputAll.forEach(function(item){
+            console.log(item);
+            item.addEventListener("change",build);
+        })
+        
+        
+        
+        function build(e){
+            console.log(e);
+        }
+
+    </script>
 </body>
 </html>

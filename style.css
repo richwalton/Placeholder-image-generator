@@ -1,0 +1,7 @@
+body {
+    display: inline-block;
+    box-sizing: border-box;
+}
+div {
+    padding: 4px 0 6px;
+}
